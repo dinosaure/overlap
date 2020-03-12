@@ -5,8 +5,8 @@ script: bash -ex .travis-opam.sh
 sudo: true
 env:
   matrix:
-  - PACKAGE="overlap" OCAML_VERSION=4.07 TESTS=true
-  - PACKAGE="overlap" OCAML_VERSION=4.07 TEST=false DEPOPTS="mirage-xen-posix"
-  - PACKAGE="overlap" OCAML_VERSION=4.07 TEST=false DEPOPTS="ocaml-freestanding"
-  - PACKAGE="overlap" OCAML_VERSION=4.08 TESTS=true
-  - PACKAGE="overlap" OCAML_VERSION=4.09 TESTS=true
+  - PACKAGE="bigarray-overlap" OCAML_VERSION=4.07 TESTS=true
+  - PACKAGE="bigarray-overlap" OCAML_VERSION=4.07 TEST=false DEPOPTS="mirage-xen-posix"
+  - PACKAGE="bigarray-overlap" OCAML_VERSION=4.07 TEST=false DEPOPTS="ocaml-freestanding"
+  - PACKAGE="bigarray-overlap" OCAML_VERSION=4.08 TESTS=true
+  - PACKAGE="bigarray-overlap" OCAML_VERSION=4.09 TESTS=true
