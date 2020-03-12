@@ -1,13 +1,14 @@
 opam-version: "2.0"
-name:         "overlap"
+name:         "bigarray-overlap"
 maintainer:   "Romain Calascibetta <romain.calascibetta@gmail.com>"
 authors:      "Romain Calascibetta <romain.calascibetta@gmail.com>"
-homepage:     "https://github.com/mirage/overlap"
-bug-reports:  "https://github.com/mirage/overlap/issues"
-dev-repo:     "git+https://github.com/mirage/overlap.git"
-doc:          "https://mirage.github.io/overlap/"
+homepage:     "https://github.com/dinosaure/overlap"
+bug-reports:  "https://github.com/dinosaure/overlap/issues"
+dev-repo:     "git+https://github.com/dinosaure/overlap.git"
+doc:          "https://dinosaure.github.io/overlap/"
 license:      "MIT"
 synopsis:     "Bigarray.overlap"
+description: """A minimal library to know that 2 bigarray share physically the same memory or not."""
 
 build: [
   [ "dune" "build" "-p" name "-j" jobs ]
