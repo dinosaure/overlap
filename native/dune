@@ -2,4 +2,5 @@
  (name overlap_stubs)
  (public_name bigarray-overlap.stubs)
  (libraries bigarray-compat)
- (foreign_stubs (language c) (names overlap)))
+ (foreign_stubs (language c) (names overlap))
+ (js_of_ocaml (javascript_files runtime.js)))

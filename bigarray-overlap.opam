@@ -12,8 +12,6 @@ description: """A minimal library to know that 2 bigarray share physically the s
 
 build: [
   [ "dune" "build" "-p" name "-j" jobs ]
-  [ "sh" "-exc" "echo \"xen_linkopts = \\\"-l:stubs/xen/liboverlap_stubs_xen_stubs.a\\\"\" >> _build/default/META.overlap"]
-  [ "sh" "-exc" "echo \"freestanding_linkopts = \\\"-l:stubs/freestanding/liboverlap_stubs_freestanding_stubs.a\\\"\" >> _build/default/META.overlap"]
   [ "dune" "runtest" "-p" name "-j" jobs ] {with-test}
 ]
 
@@ -26,16 +24,18 @@ depends: [
   "ocaml"       {>= "4.07.0"}
   "dune"
   "bigarray-compat"
-  "alcotest" {with-test}
-  "astring" {with-test}
-  "fpath" {with-test}
-  "bos" {with-test}
-  "ocamlfind" {with-test}
+  "alcotest"        {with-test}
+  "astring"         {with-test}
+  "fpath"           {with-test}
+  "bos"             {with-test}
+  "ocamlfind"       {with-test}
+  "conf-pkg-config" {with-test}
 ]
 
 depopts: [
   "ocaml-freestanding"
   "mirage-xen-posix"
+  "js_of_ocaml-compiler"
 ]
 
 conflicts: [
