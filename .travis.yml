@@ -8,5 +8,7 @@ env:
   - PACKAGE="bigarray-overlap" OCAML_VERSION=4.07 TESTS=true
   - PACKAGE="bigarray-overlap" OCAML_VERSION=4.07 TEST=false DEPOPTS="mirage-xen-posix"
   - PACKAGE="bigarray-overlap" OCAML_VERSION=4.07 TEST=false DEPOPTS="ocaml-freestanding"
+  - PACKAGE="bigarray-overlap" OCAML_VERSION=4.07 TEST=false DEPOPTS="js_of_ocaml-compiler"
   - PACKAGE="bigarray-overlap" OCAML_VERSION=4.08 TESTS=true
   - PACKAGE="bigarray-overlap" OCAML_VERSION=4.09 TESTS=true
+  - PACKAGE="bigarray-overlap" OCAML_VERSION=4.10 TESTS=true
