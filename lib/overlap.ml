@@ -1,5 +1,5 @@
 open Overlap_stubs
-open Bigarray_compat
+open Bigarray
 
 let c_nth_dims a i = Genarray.nth_dim a i
 let fortran_nth_dims a i = Genarray.nth_dim a (Genarray.num_dims a - i - 1)

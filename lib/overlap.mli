@@ -1,4 +1,4 @@
-open Bigarray_compat
+open Bigarray
 
 val genarray : ('a, 'b, 'c) Genarray.t -> ('a, 'b, 'c) Genarray.t -> (int * int array * int array) option
 val array0 : ('a, 'b, 'c) Array0.t -> ('a, 'b, 'c) Array0.t -> bool

@@ -1,12 +1,14 @@
-(library
- (name overlap_stubs_freestanding)
- (public_name bigarray-overlap.stubs.freestanding)
- (modules overlap_stubs)
- (optional)
- (libraries bigarray-compat ocaml-freestanding)
- (foreign_stubs (language c) (names overlap)))
+(copy_files# ../lib/*.c)
 
-(rule (copy ../native/overlap.c overlap.c))
-(rule (copy ../native/overlap_stubs.ml overlap_stubs.ml))
+(rule
+ (deps Makefile overlap.c)
+ (targets liboverlap_freestanding_stubs.a)
+ (action
+  (no-infer
+   (progn
+    (run %{make})))))
 
-(rule (with-stdout-to cflags.sexp (run ./cflags.sh)))
+(install
+ (package bigarray-overlap)
+ (section lib)
+ (files liboverlap_freestanding_stubs.a))
