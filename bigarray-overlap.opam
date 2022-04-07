@@ -21,9 +21,8 @@ install: [
 ]
 
 depends: [
-  "ocaml"       {>= "4.07.0"}
-  "dune"        {>= "2.3"}
-  "bigarray-compat"
+  "ocaml"       {>= "4.08.0"}
+  "dune"        {>= "2.6"}
   "alcotest"        {with-test}
   "astring"         {with-test}
   "fpath"           {with-test}

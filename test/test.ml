@@ -13,14 +13,14 @@ let triple a b c =
        eq_a u x && eq_b v y && eq_c w z)
 
 let test w i v0 v1 =
-  Alcotest.(check w) (Fmt.strf "%d" i) v0 v1
+  Alcotest.(check w) (Fmt.str "%d" i) v0 v1
 
-open Bigarray_compat
+open Bigarray
 
 module Make (B : sig
         type layout
 
-        val layout : layout Bigarray_compat.layout
+        val layout : layout Bigarray.layout
         val sub1 : ('a, 'b, layout) Array1.t -> int -> int -> ('a, 'b, layout) Array1.t
         val sub2 : ('a, 'b, layout) Array2.t -> int -> int -> ('a, 'b, layout) Array2.t
         val sub3 : ('a, 'b, layout) Array3.t -> int -> int -> ('a, 'b, layout) Array3.t
